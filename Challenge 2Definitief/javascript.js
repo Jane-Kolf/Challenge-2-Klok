@@ -1,4 +1,3 @@
-
 var today = new Date();
 
 var maanden = new Array('januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december');
@@ -23,14 +22,26 @@ else if ( hour >= 12 && hour < 18){
   document.getElementById("icon").innerHTML = "🚀";
   document.body.style.backgroundImage = "url('middag_bg.jpg')";
   document.getElementById("weer").src = "weer.png";
-  document.body.style.backgroundPosition = " right center";
-  //document.body.style.backgroundPositionX = " -500px";
+  document.getElementById("weer").style.width = "20%";
+  document.getElementById("weer").style.top = "22%";
 }
 else {
 document.getElementById("groet").innerHTML = "Goedeavond mensen!";
 document.getElementById("icon").innerHTML = "💤";
-document.body.style.backgroundImage = "url('space.jpg')";
+document.body.style.backgroundImage = "url('avond_bg.jpg')";
 document.getElementById("weer").src = "moon.png";
-document.getElementById("weer").style.width = "50px";
-
+document.getElementById("weer").style.width = "100px";
+document.getElementById("weer").style.left = "45%";
+document.getElementById("weer").style.top = "25%";
 }
+
+var plusminut = addLeadingZero(today.getMinutes());
+var plushour = addLeadingZero(today.getHours());
+
+function addLeadingZero(number){
+  if(number < 10){
+      return '0' + number;
+  }
+  return number
+}
+

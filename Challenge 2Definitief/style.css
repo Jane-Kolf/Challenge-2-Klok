@@ -5,14 +5,6 @@
 
 /*Mobiel width 360 x 640px (Moto G4)*/
 @media only screen and (min-width: 320px) {
-    .left{
-        display: flex;
-        flex-direction: column;
-    }
-    .right{
-        display: flex;
-        flex-direction: row;
-    }
     body {
         background-repeat: no-repeat;
         background-size: cover;
@@ -36,7 +28,7 @@
         position: absolute;
         top: 15%;
         left: 40%;
-        animation: circle 60s linear infinite;
+        animation: circle 3s linear infinite;
     }
 
     @keyframes circle{
@@ -53,7 +45,7 @@
         }
     }
     
-    #tijd{
+    #time{
         color: whitesmoke;
         font-size: 60px;
         font-family: 'Arvo', serif;
@@ -61,7 +53,7 @@
         padding-top: 25%;
     }
 
-    #datum{
+    #date{
         font-size: 20px;
         font-family: 'Arvo', serif;
         text-align: center;
@@ -155,26 +147,27 @@
     #weer{
         width: 15%;
         margin-top: 7%;
+        left: 45%;
     }
 
     @keyframes circle{
         0%{
         transform:rotate(0deg)
-                    translate(-200px)
+                    translate(-220px)
                     rotate(0deg);
         
         }
         100%{
         transform:rotate(360deg)
-                    translate(-200px)
+                    translate(-220px)
                     rotate(-360deg);
         }
     }
-    #tijd{
+    #time{
         font-size: 80px;
     }
 
-    #datum{
+    #date{
         font-size: 35px;
     }
 
@@ -185,8 +178,8 @@
     }
 
     h2{
-        font-size: 25px;
-        margin-bottom: 5%;
+        font-size: 30px;
+        margin-bottom: 0%;
     }
 
     button{
@@ -212,42 +205,43 @@
     }
     
 }
-/*Tablet width 1024 x 1024px (Ipad)*/
+/* laptop width 1280px */
 @media only screen and (min-width: 1024px) {
-    .left{
-        display: flex;
-        flex-direction: column;
-    }
-    .right{
-        display: flex;
-        flex-direction: column-reverse;
-    }
     body{
         width: none;
         background-repeat: no-repeat;
          background-size: cover;
         height: 100vh;
+        overflow: hidden;
         }
 
     @keyframes circle{
         0%{
         transform:rotate(0deg)
-                    translate(-180px)
+                    translate(-200px)
                     rotate(0deg);
         
         }
         100%{
         transform:rotate(360deg)
-                    translate(-180px)
+                    translate(-200px)
                     rotate(-360deg);
         }
     }
-    #tijd{
+    #time{
         font-size: 80px;
     }
 
-    #datum{
+    #date{
         font-size: 35px;
+    }
+
+    #weer{
+        width: 20%;
+        position: absolute;
+        top: 15%;
+        left: 5%;
+        animation: circle 3s linear infinite;
     }
 
     h1 {
@@ -257,12 +251,12 @@
     }
 
     h2{
-        font-size: 25px;
+        font-size: 50px;
         margin-bottom: 5%;
     }
 
     button{
-        font-size: 25px;
+        font-size: 20px;
         margin-bottom: 5%;
         margin-top: 0%;
         padding: 15px;
@@ -271,16 +265,89 @@
     }
 
     .map{
-        width: 40%;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
+        margin-top: 0%;
+        width: 80%;
+        display: inline;
+        float: left;
     }
 
     .logo{
-        width: 35%;
-        margin-top: 0%;
+        width: 25%;
+        margin-top: 5%;
         animation: slidein 3s;
     }
+
+    .klok{
+        margin-top: 15%;
+    }
     
+    .flex-container{
+        flex-direction: row-reverse;
+    }
+    .flex-container >.right {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-right: 0%;
+    }
+  
+    .flex-container > .left {
+        float: left;
+        margin-right: 0%;
+        margin-left: 0%;
+        
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
+    @keyframes circle{
+        0%{
+        transform:rotate(0deg)
+                    translate(-200px)
+                    rotate(0deg);
+        
+        }
+        100%{
+        transform:rotate(360deg)
+                    translate(-200px)
+                    rotate(-360deg);
+        }
+    }
+    #weer{
+        width: 20%;
+        position: absolute;
+        top: 15%;
+        left: 15%;
+        animation: circle 3s linear infinite;
+    }
+
+
+
+}
+
+@media only screen and (min-width: 1920px) {
+
+    @keyframes circle{
+        0%{
+        transform:rotate(0deg)
+                    translate(-200px)
+                    rotate(0deg);
+        
+        }
+        100%{
+        transform:rotate(360deg)
+                    translate(-200px)
+                    rotate(-360deg);
+        }
+    }
+    #weer{
+        width: 20%;
+        position: absolute;
+        top: 7%;
+        left: 12%;
+        animation: circle 3s linear infinite;
+    }
+
+
+
 }

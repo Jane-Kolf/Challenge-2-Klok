@@ -5,14 +5,6 @@
 
 /*Mobiel width 360 x 640px (Moto G4)*/
 @media only screen and (min-width: 320px) {
-    .left{
-        display: flex;
-        flex-direction: column;
-    }
-    .right{
-        display: flex;
-        flex-direction: row;
-    }
     body {
         background-repeat: no-repeat;
         background-size: cover;
@@ -20,7 +12,7 @@
 
     }
     .klok{
-        margin-top: 10%;
+        margin-top: 15%;
         background-color: rgba(188, 19, 19, 0.95);
         border-radius: 50%;
         width: 200px;
@@ -34,7 +26,7 @@
     #weer{
         width: 20%;
         position: absolute;
-        top: 15%;
+        top: 20%;
         left: 40%;
         animation: circle 60s linear infinite;
     }
@@ -42,18 +34,18 @@
     @keyframes circle{
         0%{
         transform:rotate(0deg)
-                    translate(-110px)
+                    translate(-130px)
                     rotate(0deg);
         
         }
         100%{
         transform:rotate(360deg)
-                    translate(-110px)
+                    translate(-130px)
                     rotate(-360deg);
         }
     }
     
-    #tijd{
+    #time{
         color: whitesmoke;
         font-size: 60px;
         font-family: 'Arvo', serif;
@@ -61,7 +53,7 @@
         padding-top: 25%;
     }
 
-    #datum{
+    #date{
         font-size: 20px;
         font-family: 'Arvo', serif;
         text-align: center;
@@ -147,34 +139,38 @@
 @media only screen and (min-width: 600px) {
     body{
         width: 100vw;
+        overflow: hidden;
     }
     .klok{
+        margin-top: 10%;
          width: 350px;
         height: 350px;
     }
     #weer{
         width: 15%;
-        margin-top: 7%;
+        margin-top: -2%;
+        left: 45%;
+        animation: circle 60s linear infinite;
     }
 
     @keyframes circle{
         0%{
         transform:rotate(0deg)
-                    translate(-200px)
+                    translate(-220px)
                     rotate(0deg);
         
         }
         100%{
         transform:rotate(360deg)
-                    translate(-200px)
+                    translate(-220px)
                     rotate(-360deg);
         }
     }
-    #tijd{
+    #time{
         font-size: 80px;
     }
 
-    #datum{
+    #date{
         font-size: 35px;
     }
 
@@ -185,8 +181,8 @@
     }
 
     h2{
-        font-size: 25px;
-        margin-bottom: 5%;
+        font-size: 30px;
+        margin-bottom: 0%;
     }
 
     button{
@@ -212,21 +208,14 @@
     }
     
 }
-/*Tablet width 1024 x 1024px (Ipad)*/
+/* laptop width 1280px */
 @media only screen and (min-width: 1024px) {
-    .left{
-        display: flex;
-        flex-direction: column;
-    }
-    .right{
-        display: flex;
-        flex-direction: column-reverse;
-    }
     body{
         width: none;
         background-repeat: no-repeat;
          background-size: cover;
         height: 100vh;
+        overflow: hidden;
         }
 
     @keyframes circle{
@@ -242,12 +231,20 @@
                     rotate(-360deg);
         }
     }
-    #tijd{
+    #time{
         font-size: 80px;
     }
 
-    #datum{
+    #date{
         font-size: 35px;
+    }
+
+    #weer{
+        width: 10%;
+        position: absolute;
+        top: 25%;
+        left: 22%;
+        animation: circle 3s linear infinite;
     }
 
     h1 {
@@ -257,12 +254,12 @@
     }
 
     h2{
-        font-size: 25px;
+        font-size: 50px;
         margin-bottom: 5%;
     }
 
     button{
-        font-size: 25px;
+        font-size: 20px;
         margin-bottom: 5%;
         margin-top: 0%;
         padding: 15px;
@@ -271,16 +268,98 @@
     }
 
     .map{
-        width: 40%;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
+        margin-top: 0%;
+        width: 80%;
+        display: inline;
+        float: left;
     }
 
     .logo{
-        width: 35%;
-        margin-top: 0%;
+        width: 25%;
+        margin-top: 5%;
         animation: slidein 3s;
     }
+
+    .klok{
+        margin-top: 15%;
+        width: 300px;
+        height: 300px;
+    }
     
+    .flex-container{
+        flex-direction: row-reverse;
+    }
+    .flex-container >.right {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-right: 0%;
+    }
+  
+    .flex-container > .left {
+        float: left;
+        margin-right: 0%;
+        margin-left: 0%;
+        
+    }
+}
+
+
+@media only screen and (min-width: 1280px) {
+
+    @keyframes circle{
+        0%{
+        transform:rotate(0deg)
+                    translate(-190px)
+                    rotate(0deg);
+        
+        }
+        100%{
+        transform:rotate(360deg)
+                    translate(-190px)
+                    rotate(-360deg);
+        }
+    }
+    #weer{
+        width: 7%;
+        position: absolute;
+        top: 27%;
+        left: 15%;
+        animation: circle 3s linear infinite;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+
+    @keyframes circle{
+        0%{
+        transform:rotate(0deg)
+                    translate(-240px)
+                    rotate(0deg);
+        
+        }
+        100%{
+        transform:rotate(360deg)
+                    translate(-240px)
+                    rotate(-360deg);
+        }
+    }
+    #weer{
+        width: 7%;
+        position: absolute;
+        top: 27%;
+        left: 17%;
+        animation: circle 60s linear infinite;
+    }
+    .klok{
+        margin-top: 20%;
+         width: 400px;
+        height: 400px;
+    }
+    .flex-container > .left {
+        float: left;
+        margin-right: 0%;
+        margin-left: 5%;
+        
+    }
+
 }

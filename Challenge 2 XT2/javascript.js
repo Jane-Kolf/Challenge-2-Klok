@@ -7,7 +7,7 @@ document.getElementById('datum').innerHTML = today.getDate() + ' ' + maanden[tod
 
 var minutes = today.getMinutes;
 
-document.getElementById('tijd').innerHTML = today.getHours() + ':' + today.getMinutes();
+document.getElementById('time').innerHTML = today.getHours() + ':' + today.getMinutes();
 
 
 var hour = today.getHours();
@@ -33,4 +33,26 @@ document.body.style.backgroundImage = "url('space.jpg')";
 document.getElementById("weer").src = "moon.png";
 document.getElementById("weer").style.width = "50px";
 
+}
+function getCurrentTime(date) {
+	var time = [];
+
+	// fill array
+	time['seconds'] = date.getSeconds();
+	time['minutes'] = date.getMinutes(),
+	time['hours']   = date.getHours();
+	time['month']   = date.getMonth();
+	time['date']     = date.getDate();
+
+	// hours: add leading zero
+	if (time['hours'] < 10) {
+		time['hours'] = '0' + time['hours'];
+	}
+
+	// minutes: add leading zero
+	if (time['minutes'] < 10) {
+		time['minutes'] = '0' + time['minutes'];
+	}
+
+	return time;
 }
