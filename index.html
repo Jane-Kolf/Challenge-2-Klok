@@ -4,13 +4,15 @@
         <meta charset="utf-8">
         <title>Space X klok</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="spacex-logo.png" />
         <link rel="stylesheet" href="styleversie2.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
         <script src="javascript_klok.js" defer></script>
     </head>
-    <body>
+    <body onload="setInterval('updateTime()',1000)">
+
         <div class="flex-container">
             <div class="left">
                 <div class="mood">

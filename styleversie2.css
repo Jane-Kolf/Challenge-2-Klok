@@ -9,8 +9,13 @@
         background-repeat: no-repeat;
         background-size: cover;
         height: 100vh;
-
+        animation: fadeIn 2s;
     }
+
+    @keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+        }
     .klok{
         margin-top: 15%;
         background-color: rgba(188, 19, 19, 0.95);
@@ -244,7 +249,7 @@
         position: absolute;
         top: 25%;
         left: 22%;
-        animation: circle 3s linear infinite;
+        animation: circle 60s linear infinite;
     }
 
     h1 {
@@ -324,7 +329,7 @@
         position: absolute;
         top: 27%;
         left: 15%;
-        animation: circle 3s linear infinite;
+        animation: circle 60s linear infinite;
     }
 }
 
